@@ -22,12 +22,17 @@
       const title = "welcome to my website"
       const subtitle = "this is a website for learning react"
 
+      const handleClick = (e) => {
+        console.log('you clicked me')
+        console.log('site title is: ', title)
+        console.log('event object: ', e)
+      }
+
       return (
         <div className="banner">
           <h2>{title.toUpperCase()}</h2>
           <p>{subtitle}</p>
-          <p>Today's date is: {new Date().toDateString()}</p>
-          <p>Random number: {Math.random() * 100}</p>
+          <button onClick={(e) => console.log(e)}>Click me</button>
         </div>
       )
     }
