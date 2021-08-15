@@ -33,8 +33,11 @@ function App() {
           <button onClick={() => setShowEvents(false)}>Hide Events</button>
         </div>
       )}
-      {!showEvents && <button onClick={() => setShowEvents(true)}>Show Events</button>}
-      
+      {!showEvents && (
+        <div>
+          <button onClick={() => setShowEvents(true)}>Show Events</button>
+        </div>
+      )}
       {showEvents && events.map((event, index) => (
         <React.Fragment key={event.id}>
           <h2>{index} - {event.title}</h2>
