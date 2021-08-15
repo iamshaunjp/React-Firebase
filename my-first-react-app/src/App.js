@@ -16,9 +16,12 @@ function App() {
     })
   }
 
+  const subtitle = "All the latest events in Marioland"
+
   return (
     <div className="App">
-      <Title />
+      <Title title="Marioland Events" subtitle={subtitle} />
+      {/* <Title title="Another title" subtitle="Another subtitle" /> */}
       
       {showEvents && (
         <div>
