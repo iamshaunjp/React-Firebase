@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './NewEventForm.css'
 
 export default function NewEventForm() {
-  const [title, setTitle] = useState(null)
-  const [date, setDate] = useState(null)
+  const [title, setTitle] = useState('')
+  const [date, setDate] = useState('')
 
   // const handleChange = (e) => {
   //   console.log(e.target.value)
