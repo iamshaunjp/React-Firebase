@@ -1,0 +1,18 @@
+.card {
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 5px rgba(0,0,0,0.05);
+  padding: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+/* this will be global */
+/* button {
+  background-color: #555;
+} */
+
+/* this will be scoped */
+.card button {
+  background-color: #555;
+}
