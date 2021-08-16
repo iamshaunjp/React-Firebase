@@ -1,0 +1,10 @@
+.new-event-form label,
+.new-event-form input {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
