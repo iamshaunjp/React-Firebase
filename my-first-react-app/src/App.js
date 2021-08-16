@@ -40,7 +40,7 @@ function App() {
         </div>
       )}
       {showEvents && <EventList events={events} handleClick={handleClick} />}
-
+      
       {showModal && (
         <Modal handleClose={handleClose}>
           <h2>Terms and Conditions</h2>
