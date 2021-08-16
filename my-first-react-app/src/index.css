@@ -24,21 +24,3 @@ button {
   margin: 10px auto;
   cursor: pointer;
 }
-
-.title {
-  display: inline-block;
-  padding: 30px 60px;
-  background: #f4f4f4;
-  border-radius: 8px;
-  font-weight: normal;
-  margin-bottom: 10px;
-}
-.subtitle {
-  display: inline-block;
-  color: #555;
-  font-weight: normal;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #f4f4f4;
-  margin-top: 10px;
-  margin-bottom: 60px;
-}
