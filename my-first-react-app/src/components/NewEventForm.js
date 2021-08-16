@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './NewEventForm.css'
 
-export default function NewEventForm() {
+export default function NewEventForm({ addEvent }) {
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
 
@@ -17,7 +17,7 @@ export default function NewEventForm() {
       date: date,
       id: Math.floor(Math.random() * 10000)
     }
-    console.log(event)
+    addEvent(event)
     resetForm()
   }
 
@@ -29,6 +29,7 @@ export default function NewEventForm() {
           type="text"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
+          required
         />
       </label>
       <label>
@@ -37,6 +38,7 @@ export default function NewEventForm() {
           type="date"
           onChange={(e) => setDate(e.target.value)}
           value={date}
+          required
         />
       </label>
       <button>Submit</button>
