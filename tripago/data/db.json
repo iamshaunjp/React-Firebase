@@ -1,0 +1,20 @@
+{
+  "trips": [
+    {
+      "title": "2 Night Stay in Venice",
+      "price": "£195"
+    },
+    {
+      "title": "3 Night Stay in Paris",
+      "price": "£295"
+    },
+    {
+      "title": "4 Night Stay in London",
+      "price": "£345"
+    },
+    {
+      "title": "3 Night Stay in New York",
+      "price": "£325"
+    }
+  ]
+}
