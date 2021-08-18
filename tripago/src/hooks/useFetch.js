@@ -23,10 +23,15 @@ export const useFetch = (url) => {
         setError('Could not fetch the data')
         console.log(err.message)
       }
-      
     }
 
     fetchData()
+
+    // cleanup function
+    return () => {
+      console.log('cleanup function ran')
+    }
+
   }, [url])
 
   return { data, isPending, error }
