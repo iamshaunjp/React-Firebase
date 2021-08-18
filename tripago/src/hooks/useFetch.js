@@ -23,12 +23,9 @@ export const useFetch = (url, _options) => {
         }
         const data = await res.json()
 
-        setTimeout(() => {
-          setIsPending(false)
-          setData(data)
-          setError(null)
-        }, 2000)
-
+        setIsPending(false)
+        setData(data)
+        setError(null)
       } catch (err) {
         setIsPending(false)
         setError('Could not fetch the data')
