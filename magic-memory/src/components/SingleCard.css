@@ -7,3 +7,17 @@
   border: 2px solid #fff;
   border-radius: 6px;
 }
+
+/* front of card - the picture */
+.card .front {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+.flipped .front {
+  transform: rotateY(0deg);
+}
+
+/* back of card - cover */
+.flipped .back {
+  transform: rotateY(90deg);
+}
