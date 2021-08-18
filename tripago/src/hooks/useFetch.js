@@ -36,7 +36,6 @@ export const useFetch = (url, _options) => {
     fetchData()
 
     return () => {
-      console.log('aborting the fetch')
       controller.abort()
     }
 
