@@ -18,12 +18,9 @@ export const useFetch = (url) => {
         }
         const data = await res.json()
 
-        setTimeout(() => {
-          setIsPending(false)
-          setData(data)
-          setError(null)
-        }, 2000)
-
+        setIsPending(false)
+        setData(data)
+        setError(null)
       } catch (err) {
         setIsPending(false)
         setError('Could not fetch the data')
@@ -34,7 +31,6 @@ export const useFetch = (url) => {
     fetchData()
 
     return () => {
-      console.log('aborting the fetch')
       controller.abort()
     }
 
