@@ -6,8 +6,10 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+
     const fetchData = async () => {
       setIsPending(true)
+      
       try {
         const res = await fetch(url)
         if(!res.ok) {
@@ -15,9 +17,12 @@ export const useFetch = (url) => {
         }
         const data = await res.json()
 
-        setIsPending(false)
-        setData(data)
-        setError(null)
+        setTimeout(() => {
+          setIsPending(false)
+          setData(data)
+          setError(null)
+        }, 2000)
+
       } catch (err) {
         setIsPending(false)
         setError('Could not fetch the data')
@@ -26,11 +31,6 @@ export const useFetch = (url) => {
     }
 
     fetchData()
-
-    // cleanup function
-    return () => {
-      console.log('cleanup function ran')
-    }
 
   }, [url])
 
