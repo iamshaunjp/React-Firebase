@@ -9,24 +9,22 @@ export const useFetch = (url) => {
 
     const fetchData = async () => {
       setIsPending(true)
-      
-      setTimeout(async () => {
-        try {
-          const res = await fetch(url)
-          if(!res.ok) {
-            throw new Error(res.statusText)
-          }
-          const data = await res.json()
-          
-          setIsPending(false)
-          setData(data)
-          setError(null)
-        } catch (err) {
-          setIsPending(false)
-          setError('Could not fetch the data')
-          console.log(err.message)
+
+      try {
+        const res = await fetch(url)
+        if(!res.ok) {
+          throw new Error(res.statusText)
         }
-      }, 2000)
+        const data = await res.json()
+
+        setIsPending(false)
+        setData(data)
+        setError(null)
+      } catch (err) {
+        setIsPending(false)
+        setError('Could not fetch the data')
+        console.log(err.message)
+      }
 
     } // end of fetchData function
       
