@@ -17,24 +17,21 @@ export const useFetch = (url) => {
           throw new Error(res.statusText)
         }
         const data = await res.json()
-
-        setTimeout(() => {
-          setIsPending(false)
-          setData(data)
-          setError(null)
-        }, 2000)
-
+        
+        setIsPending(false)
+        setData(data)
+        setError(null)
       } catch (err) {
         setIsPending(false)
         setError('Could not fetch the data')
         console.log(err.message)
       }
-    }
+
+    } // end of fetchData function
 
     fetchData()
 
     return () => {
-      console.log('aborting the fetch')
       controller.abort()
     }
 
