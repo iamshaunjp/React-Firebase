@@ -19,6 +19,7 @@ function App() {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </nav>
+
         <Switch>
           <Route exact path="/">
             <Home />  
@@ -30,6 +31,7 @@ function App() {
             <Contact />  
           </Route>
         </Switch>
+        
       </BrowserRouter>
     </div>
   );
