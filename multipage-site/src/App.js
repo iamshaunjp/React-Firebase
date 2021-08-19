@@ -9,10 +9,11 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <div className="App">
-      <nav>
-        <h1>My Articles</h1>
-      </nav>
       <BrowserRouter>
+        <nav>
+          <h1>My Articles</h1>
+        </nav>
+
         <Switch>
           <Route exact path="/">
             <Home />  
@@ -24,6 +25,7 @@ function App() {
             <Contact />  
           </Route>
         </Switch>
+        
       </BrowserRouter>
     </div>
   );
