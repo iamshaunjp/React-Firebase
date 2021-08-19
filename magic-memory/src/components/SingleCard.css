@@ -16,8 +16,3 @@
 .flipped .front {
   transform: rotateY(0deg);
 }
-
-/* back of card - cover */
-.flipped .back {
-  transform: rotateY(90deg);
-}
