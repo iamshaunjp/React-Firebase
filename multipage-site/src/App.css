@@ -5,4 +5,18 @@
 nav {
   display: flex;
   margin: 0 auto 120px;
+  gap: 10px;
+  align-items: center;
+}
+nav h1 {
+  margin-right: auto;
+}
+nav a {
+  color: #333;
+  padding: 4px 10px;
+}
+nav a.active {
+  color: white;
+  background: #333;
+  text-decoration: none;
 }
