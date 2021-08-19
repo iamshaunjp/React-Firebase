@@ -9,10 +9,12 @@ export default function Article() {
   const history = useHistory()
 
   useEffect(() => {
-    setTimeout(() => {
-      // history.goBack()
-      history.push('/')
-    }, 2000)
+    if (error) {
+      setTimeout(() => {
+        // history.goBack()
+        history.push('/')
+      }, 2000)
+    }
   }, [error, history])
 
   return (
