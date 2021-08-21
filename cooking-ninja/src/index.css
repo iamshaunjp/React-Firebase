@@ -34,3 +34,12 @@ input, textarea {
   text-align: center;
   margin: 40px auto;
 }
+
+/* dark mode */
+.dark .page-title,
+.dark .loading,
+.dark .error,
+.dark label,
+.dark p {
+  color: #e4e4e4;
+}
