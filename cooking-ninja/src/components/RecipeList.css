@@ -44,6 +44,13 @@
   border-radius: 4px;
   margin: 20px auto 0;
 }
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(60%);
+}
 
 /* dark mode */
 .recipe-list .card.dark {
