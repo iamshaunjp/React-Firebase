@@ -6,11 +6,11 @@ service cloud.firestore {
       // allow read, write;
       // allow create, delete, update, read;
 
-      // must be authenticated to read & create
-      allow create, read: if request.auth != null;
+      // must be authenticated to create
+      allow create: if request.auth != null;
 
-      // loged in user uid must match the document creator
-      allow delete: if request.auth.uid == resource.data.uid;
+      // logged in user uid must match the document creator to read & delete
+      allow read, delete: if request.auth.uid == resource.data.uid;
     }
   }
 }
