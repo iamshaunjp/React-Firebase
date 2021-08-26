@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { useCollection } from '../../hooks/useCollection'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { timestamp } from '../../firebase/config'
+import { useFirestore } from '../../hooks/useFirestore'
+import { useHistory } from 'react-router'
 import Select from 'react-select'
 
 // styles
@@ -15,6 +17,8 @@ const categories = [
 ]
 
 export default function Create() {
+  const history = useHistory()
+  const { addDocument, response } = useFirestore('projects')
   const { user } = useAuthContext()
   const { documents } = useCollection('users')
   const [users, setUsers] = useState([])
@@ -72,7 +76,10 @@ export default function Create() {
       comments: []
     }
 
-    console.log(project)
+    await addDocument(project)
+    if (!response.error) {
+      history.push('/')
+    }
   }
 
   return (
