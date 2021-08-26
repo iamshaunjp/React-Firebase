@@ -1,9 +1,13 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if
-          request.time < timestamp.date(2021, 9, 24);
+    match /users/{user_id} {
+      allow read, create: if request.auth != null;
+      allow update: if request.auth.uid == user_id;
+    }
+    match /projects/{project_id} {
+      allow read, create, update: if request.auth != null;
+      allow delete: if request.auth.uid == resource.data.createdBy.id;
     }
   }
 }
