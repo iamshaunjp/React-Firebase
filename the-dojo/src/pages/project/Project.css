@@ -77,3 +77,24 @@
   color: var(--text-color);
   font-size: 0.9em;
 }
+
+/* comments scrollbar */
+.project-comments {
+  max-height: 800px;
+  overflow: auto;
+  padding-right: 20px;
+  /* firefox scrollbar style */
+  scrollbar-width: 20px;
+  scrollbar-color: #fff #e4e4e4;
+}
+/* Chrome, Edge, and Safari scrollbar styles */
+.project-comments::-webkit-scrollbar {
+  width: 6px;
+}
+.project-comments::-webkit-scrollbar-track {
+  background: #fff;
+}
+.project-comments::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 3px solid #e4e4e4;
+}
