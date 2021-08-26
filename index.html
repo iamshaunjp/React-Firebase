@@ -21,6 +21,7 @@
     const Banner = () => {
       const title = "welcome to my website"
       const subtitle = "this is a website for learning react"
+      const address = "www.netninja.dev"
 
       return (
         <div className="banner">
@@ -28,6 +29,7 @@
           <p>{subtitle}</p>
           <p>Today's date is: {new Date().toDateString()}</p>
           <p>Random number: {Math.random() * 100}</p>
+          <a href={address}>Visit the Net Ninja site</a>
         </div>
       )
     }
