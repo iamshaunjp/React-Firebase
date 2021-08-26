@@ -1,0 +1,26 @@
+.user-list {
+  width: 250px;
+  min-width: 250px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #fbfbfb;
+  color: var(--heading-color);
+}
+.user-list h2 {
+  text-align: right;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2em;
+}
+.user-list .user-list-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px auto;
+}
+.user-list .avatar {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+}
