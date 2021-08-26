@@ -45,3 +45,11 @@
 .sidebar .links .active img {
   filter: invert(40%);
 }
+
+/* aatar in sidebar */
+.sidebar .user .avatar {
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #fff;
+}
