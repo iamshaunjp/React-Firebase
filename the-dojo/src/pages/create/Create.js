@@ -14,7 +14,7 @@ export default function Create() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    console.log(name, details, dueDate, category.value, assignedUsers)
+    console.log(name, details, dueDate)
   }
 
   return (
