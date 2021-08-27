@@ -65,10 +65,10 @@ export default function Create() {
     const project = {
       name,
       details,
-      assignedUsersList, 
-      createdBy,
       category: category.value,
       dueDate: timestamp.fromDate(new Date(dueDate)),
+      assignedUsersList, 
+      createdBy,
       comments: []
     }
 
