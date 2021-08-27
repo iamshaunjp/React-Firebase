@@ -26,7 +26,8 @@ export default function ProjectComments() {
       <form className="add-comment" onSubmit={handleSubmit}>
         <label>
           <span>Add new comment:</span>
-          <textarea 
+          <textarea
+            required
             onChange={(e) => setNewComment(e.target.value)}
             value={newComment}
           ></textarea>
