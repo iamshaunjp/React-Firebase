@@ -8,6 +8,7 @@ export default function ProjectFilter() {
   const handleClick = (newFilter) => {
     setCurrentFilter(newFilter)
   }
+  console.log(currentFilter)
 
   return (
     <div className="project-filter">
