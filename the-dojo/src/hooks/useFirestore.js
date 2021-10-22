@@ -10,16 +10,16 @@ let initialState = {
 
 const firestoreReducer = (state, action) => {
   switch (action.type) {
-    case "IS_PENDING":
-      return {success: false, isPending: true, error: null, document: null}
-    case "ERROR":
-      return {success: false, isPending: false, error: action.payload, document: null}
-    case "ADDED_DOCUMENT":
-      return {success: true, isPending: false, error: null, document: action.payload}
-    case "DELETED_DOCUMENT":
-      return {success: true, isPending: false, error: null, document: null}
+    case 'IS_PENDING':
+      return { isPending: true, document: null, success: false, error: null }
+    case 'ADDED_DOCUMENT':
+      return { isPending: false, document: action.payload, success: true, error: null }
+    case 'DELETED_DOCUMENT':
+      return { isPending: false, document: null, success: true, error: null }
+    case 'ERROR':
+      return { isPending: false, document: null, success: false, error: action.payload }
     case "UPDATED_DOCUMENT":
-      return {success: true, isPending: false, error: null, document: action.payload}
+      return { isPending: false, document: action.payload, success: true,  error: null }
     default:
       return state
   }
@@ -41,28 +41,28 @@ export const useFirestore = (collection) => {
   
   // add a document
   const addDocument = async (doc) => {
-    dispatch({ type: "IS_PENDING" })
+    dispatch({ type: 'IS_PENDING' })
 
     try {
       const createdAt = timestamp.fromDate(new Date())
-      const addedDocument = await ref.add({...doc, createdAt })
-      dispatchIfNotCancelled({ type: "ADDED_DOCUMENT", document: addedDocument })
+      const addedDocument = await ref.add({ ...doc, createdAt })
+      dispatchIfNotCancelled({ type: 'ADDED_DOCUMENT', payload: addedDocument })
     }
     catch (err) {
-      dispatchIfNotCancelled({ type: "ERROR", error: err })
+      dispatchIfNotCancelled({ type: 'ERROR', payload: err.message })
     }
   }
 
   // delete a document
   const deleteDocument = async (id) => {
-    dispatch({ type: "IS_PENDING" })
+    dispatch({ type: 'IS_PENDING' })
 
     try {
-      const deletedDocument = await ref.doc(id).delete()
-      dispatchIfNotCancelled({ type: "DELETED_DOCUMENT", payload: deletedDocument })
-    } 
+      await ref.doc(id).delete()
+      dispatchIfNotCancelled({ type: 'DELETED_DOCUMENT' })
+    }
     catch (err) {
-      dispatchIfNotCancelled({ type: "ERROR", error: 'could not delete' })
+      dispatchIfNotCancelled({ type: 'ERROR', payload: 'could not delete' })
     }
   }
 
