@@ -14,6 +14,12 @@ function App() {
     {title: "race on moo moo farm", id: 3}
   ])
 
+  const addEvent = (event) => {
+    setEvents((prevEvents) => {
+      return [...prevEvents,event]
+    })
+    setShowModal(false)
+  }
   const handleClick = (id) => {
     setEvents(prevEvents => {
       return prevEvents.filter(event => id !== event.id)
@@ -44,7 +50,7 @@ function App() {
       
       {showModal && (
         <Modal handleClose={handleClose}>
-          <NewEventForm />
+          <NewEventForm addEvent = {addEvent}/>
         </Modal>
       )}
 
