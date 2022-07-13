@@ -26,11 +26,10 @@ function App() {
 
   return (
     <div className="App">
-       <button onClick={()=>setShowModal(true)}>Trigger Modal</button>
- <br />
+      <button onClick={() => setShowModal(true)}>Trigger Modal</button>
+      <br />
       <Title title="Marioland Events" subtitle={subtitle} />
- 
-     
+
       {showEvents && (
         <div>
           <button onClick={() => setShowEvents(false)}>Hide Events</button>
@@ -53,6 +52,7 @@ function App() {
 
       {showModal && (
         <Modal handleClose={handleClose}>
+          {/*Handle close is a prop we send to the fingy */}
           <h2>Terms and Conditions</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error odit
