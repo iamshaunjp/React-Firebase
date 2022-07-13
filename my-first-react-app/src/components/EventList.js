@@ -21,9 +21,9 @@
 
 //My Solution
 import React from "react";
-export default function EventList({ events, handleClick }) {
+export default function EventList({ events, handleClick }) {//These are the props send from App.js - The events array and the click handler function 
   return events.map((event, i) => (
-    <div key={i}>
+    <div key={i}>{/**Key is needed to cycle array, by default. second property of .map() is an index so use it */}
       <h2>{i}-{event.title}</h2>
       <button onClick={() => handleClick(event.id)}>delete</button>
     </div>

@@ -11,6 +11,9 @@ function App() {
     { title: "bowser's live stream", id: 2 },
     { title: "race on moo moo farm", id: 3 },
   ]);
+  const [differentEvents,setDifferentEvents]=useState([
+    {title:"i am a different event",id:1}
+  ]);
 
   const handleClick = (id) => {
     setEvents((prevEvents) => {
@@ -51,6 +54,9 @@ function App() {
           </React.Fragment>
         ))} */}
 
+{/**having the event list as its own component that takes the events array as a prop means we can
+ * swap out the events its taking. For example i can use events or differentEvents as the prop i pass
+ */}
         {showEvents && <EventList events={events} handleClick={handleClick}/>/**Create custom prop to passs to child which is events and the handler func */}
 
       {showModal && (
