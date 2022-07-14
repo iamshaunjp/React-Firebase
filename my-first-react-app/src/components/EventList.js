@@ -25,6 +25,7 @@ export default function EventList({ events, handleClick }) {//These are the prop
   return events.map((event, i) => (
     <div key={i}>{/**Key is needed to cycle array, by default. second property of .map() is an index so use it */}
       <h2>{i}-{event.title}</h2>
+      <p>{event.location}</p>
       <button onClick={() => handleClick(event.id)}>delete</button>
     </div>
   ));

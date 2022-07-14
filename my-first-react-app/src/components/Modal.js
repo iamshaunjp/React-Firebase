@@ -4,7 +4,7 @@ export default function Modal({ children, handleClose }) {//receives the props d
   return ReactDOM.createPortal((
     <div className="modal-backdrop">
       <div className="modal">
-        {children}
+        {children}{/**Render any children props (HTML/components we pass down) */}
         <button onClick={handleClose}>Close</button>
       </div>
     </div>
