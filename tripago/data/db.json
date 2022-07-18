@@ -1,0 +1,52 @@
+{
+    "trips":[
+        {
+            "title":"2 nights in scunny",
+            "price":"£195",
+            "id":"1",
+            "loc":"europe"
+        },
+        {
+            "title":"3 nights in grimbo",
+            "price":"£300",
+            "id":"2",
+            "loc":"europe"
+        },
+        {
+            "title":"2 nights in scunny",
+            "price":"£195",
+            "id":"3",
+            "loc":"europe"
+        },
+        {
+            "title":"3 nights in grimbo",
+            "price":"£300",
+            "id":"4",
+            "loc":"europe"
+        },
+        {
+            "title":"2 nights in scunny",
+            "price":"£195",
+            "id":"5",
+            "loc":"europe"
+        },
+        {
+            "title":"3 nights in grimbo",
+            "price":"£300",
+            "id":"6",
+            "loc":"europe"
+        },
+        {
+            "title":"2 nights in scunny",
+            "price":"£195",
+            "id":"7",
+            "loc":"europe"
+        },
+        {
+            "title":"3 nights in new york",
+            "price":"£300",
+            "id":"8",
+            "loc":"america"
+        }
+    ]
+}
