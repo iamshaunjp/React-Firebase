@@ -1,4 +1,5 @@
 {
+  "_comments": "install the JSON server package globally on your computer using npm install -g json-server. This means it isn't just local to the project. When you run json server you can get it to watch your created json file and it will wrap it with some API end points that we can use to then fetch the data. To do this open a terminal in the project directory and type json-server --watch ./data/db.json (this should be whatever the json file path is that you want to watch.)",
   "trips": [
     {
       "title": "2 Night Stay in Venice",
